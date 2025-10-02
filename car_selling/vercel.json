@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "car_selling/car_selling/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "car_selling/car-selling/wsgi.py"
+    }
+  ]
+}
